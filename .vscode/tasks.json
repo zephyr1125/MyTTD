@@ -5,7 +5,16 @@
             "type": "shell",
             "label": "C/C++: gcc build active file",
             "command": "/usr/bin/g++",
-            "args": ["-g", "${file}", "-o", "${fileDirname}/${fileBasenameNoExtension}"],
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-I/usr/include/SDL2",
+                "-lSDL2main",
+                "-lSDL2",
+                "-mwindows"
+            ],
             "options": {
                 "cwd": "${workspaceFolder}"
             },
